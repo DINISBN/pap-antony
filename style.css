@@ -2,14 +2,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 header {
+  background-color: #2e8b3a;
   display: flex;
-  height: 100px;
-  gap: 30px;
+  padding: 18px 60px;
+  gap: 16px;
   align-items: center;
   justify-content: left;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: gray;
+  padding-bottom: 8px;
+}
+
+.nav-tabs a.button {
+  color: #1a1adb;
+  font-weight: bold;
+  border-bottom: 3px solid #1a1adb;
 }
 
 img {
@@ -20,7 +34,7 @@ img {
 header .button {
   color: black;
   text-decoration: none;
-  margin-left: 50rem;
+  align-items: right;
   font-size: 25PX;
   font-family: 'Bebas Neue', sans-serif;
 }

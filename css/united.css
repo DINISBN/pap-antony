@@ -31,3 +31,102 @@ body {
   font-size: 20PX;
   font-family: 'Bebas Neue', sans-serif;
 }
+
+section {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  padding: 10px 45px;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.tab-content {
+  display: none;
+  margin: 20px 0;
+}
+
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"],
+#tab3:checked ~ .tabs label[for="tab3"] {
+  background-color: #4d63dd;
+  color: white;
+}
+
+#tab1:checked~#content1,
+#tab2:checked~#content2,
+#tab3:checked~#content3{
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin-top: -350px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: center;
+}
+
+td:first-child, th:first-child { text-align: left; }
+
+th {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
+td {
+  color: #fff;
+}
+
+.competicao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.competicao img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.antony {
+  text-align: right;
+}
+
+.antony img {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.antony p {
+  font-size: 14px;
+}
