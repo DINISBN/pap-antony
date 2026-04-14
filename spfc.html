@@ -8,20 +8,38 @@
 </head>
 <body>
   <header>
-    <a href="index.html">Voltar</a>
-    <a href="https://www.saopaulofc.net" target="_blank" class="escudo">
-      <img src="img/spfc.png" alt="escudo"> 
+    <div class="voltar">
+    <a href="index.html">
+      <img src="img/logow.png" alt="voltar">
     </a>
-    <a href="ajax.html" class="sescudo">
-      <img src="img/ajax.png" alt="escudo">
-    </a>
-    <a href="united.html" class="tescudo">
-      <img src="img/manut.webp" alt="escudo">
-    </a>
-    <a href="betis.html" class="qescudo">
-      <img src="img/betis.png" alt="escudo">
-    </a>
+  </div>
+  <div class="button">
+  <a href="brasil.html">Brasil</a>
+  <a href="trofeus.html">Troféus</a>
+</div>
   </header>
+
+  <div class="linha-header1"></div>
+
+  <div class="sub-header">
+
+  <a href="https://www.saopaulofc.net" target="_blank" class="escudo">
+    <img src="img/spfc.png" alt="escudo"> 
+  </a>
+  <a href="ajax.html" class="sescudo">
+    <img src="img/ajaxb.png" alt="escudo">
+  </a>
+  <a href="united.html" class="tescudo">
+    <img src="img/manutb.webp" alt="escudo">
+  </a>
+  <a href="betis.html" class="qescudo">
+    <img src="img/betisb.png" alt="escudo">
+  </a>
+
+</div>
+
+  <div class="linha-header2"></div>
+
   <section>
       <input type="radio" name="tabs" id="tab1" checked>
       <input type="radio" name="tabs" id="tab2">
@@ -53,6 +71,14 @@
           <td>3</td><td>-</td><td>-</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </tfoot>
     </table>
     </div>
     <div class="tab-content" id="content2">
@@ -91,6 +117,14 @@
           <td>1</td><td>-</td><td>-</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </tfoot>
     </table>
     </div>
     <div class="tab-content" id="content3">
@@ -117,10 +151,46 @@
           <td>2</td><td>-</td><td>-</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </tfoot>
     </table>
     </div>
     
   </section>
+
+  <script>
+
+    document.querySelectorAll('table').forEach(function(tabela) {
+  
+      var totalJogos = 0;
+      var totalGolos = 0;
+      var totalAssistencias = 0;
+  
+      tabela.querySelectorAll('tbody tr').forEach(function(linha) {
+  
+        var jogos         = linha.querySelectorAll('td')[1].textContent;
+        var golos         = linha.querySelectorAll('td')[2].textContent;
+        var assistencias  = linha.querySelectorAll('td')[3].textContent;
+  
+        if (jogos !== '-')        totalJogos        += parseInt(jogos);
+        if (golos !== '-')        totalGolos        += parseInt(golos);
+        if (assistencias !== '-') totalAssistencias += parseInt(assistencias);
+      });
+  
+      var colunasTfoot = tabela.querySelector('tfoot').querySelectorAll('td');
+      colunasTfoot[1].textContent = totalJogos;
+      colunasTfoot[2].textContent = totalGolos        === 0 ? '-' : totalGolos;
+      colunasTfoot[3].textContent = totalAssistencias === 0 ? '-' : totalAssistencias;
+  
+    });
+  
+  </script>
 
 </body>
 </html>

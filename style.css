@@ -2,37 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Bebas Neue', sans-serif;
 }
 
 header {
   background-color: #2e8b3a;
   display: flex;
-  padding: 18px 60px;
+  padding: 1px 60px;
   gap: 16px;
   align-items: center;
   justify-content: left;
 }
 
-.nav-tabs a {
-  text-decoration: none;
-  color: gray;
-  padding-bottom: 8px;
-}
-
-.nav-tabs a.button {
-  color: #1a1adb;
-  font-weight: bold;
-  border-bottom: 3px solid #1a1adb;
-}
-
 img {
-  width: 180px;
-  height: 150px;
+  width: 250px;
+  height: 100px;
 }
 
-header .button {
-  color: black;
+nav {
+  background-color: #1A6626;
+  padding: 6px 100px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      font-size: 15px;
+      padding-bottom: 6px;
+      text-decoration: none;
+}
+
+nav a.button {
+  color: white;
   text-decoration: none;
   align-items: right;
   font-size: 25PX;
@@ -55,5 +58,4 @@ header .button {
   transform: translateY(-50%);
   color: whitesmoke;         
   max-width: 400px;
-  font-family: 'Bebas Neue', sans-serif; 
 }

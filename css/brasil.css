@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  position: relative;
+  background-color: #2e8b3a;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.voltar {
+  position: absolute;
+  left: 20px; 
+}
+
+.voltar img {
+  width: 170px;
+  height: 50px;
+}
+
+.button a{
+  color: white;
+  text-decoration: none;
+  font-size: 25PX;
+  padding-left: 30px;
+}
+
+.linha-header {
+  height: 5px;
+  background: linear-gradient(to right, #078507,#DFF500,#000D94, #DFF500, #078507);
+  margin-bottom: 90px; 
+}
+
+
+.antf {
+  position: absolute;
+  right: 90px; 
+}
+
+.antf img {
+  width: 35rem;
+  height: 41rem;
+  border-radius: 20px;
+}
+
+.ant {
+  margin-top: 270px;
+  font-size: 80px;
+  padding: 1px 80px;
+  color: #262626;
+}
+
+.slc {
+  font-size: 80px;
+  padding: 1px 80px;
+  color: #166B22;
+}
+
+.txt {
+  font-size: 20px;
+  padding: 1px 80px;
+  color: #919191;
+}
+
+.htr {
+  font-size: 50px;
+  padding: 1px 80px;
+  color: #262626;
+  margin-top: 35rem;
+  margin-bottom: 50px;
+}
+
+.hst {
+  padding: 30px;
+  background: linear-gradient(to right, #BAFFBA,#F9FFB3,#C4D8FF, #F9FFB3, #BAFFBA);
+}
+
+.window {
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s;
+}
+
+.card {
+  min-width: 460px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.nmr {
+  font-size: 28px;
+  color: #ccc;
+  display: block;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.data {
+  background-color: #2e8b3a;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 30px;
+  color: #262626;
+}
+
+button {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.p-est {
+  font-size: 50px;
+  padding: 1px 80px;
+  color: #262626;
+  margin-top: 300px;
+  margin-bottom: 50px;
+}
+
+.est {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.est-box {
+  width: 25rem;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #EDEDED;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+
+.est-nmr {
+  font-size: 48px;
+  font-weight: bold;
+  color: #111;
+}
+
+.legenda {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}

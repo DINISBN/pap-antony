@@ -2,4 +2,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+
+header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  position: relative;
+  background-color: #2e8b3a;
+}
+
+.voltar {
+  position: absolute;
+  left: 20px; 
+}
+
+.voltar img {
+  width: 170px;
+  height: 50px;
+}
+
+.button a{
+  color: white;
+  text-decoration: none;
+  font-size: 25PX;
+  padding-left: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.linha-header {
+  height: 5px;
+  background: linear-gradient(to right, #1A6626);
+  margin-bottom: 40px; 
+}
+
+.box   {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  max-width: 100rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  margin-bottom: 20px; 
+}
+
+.img-t {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.num-t {
+  font-size: 60px;
+  font-weight: bold;
+  color: #2e8b3a;
+}
+
+.info-t h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.info-t p {
+  font-size: 13px;
+  color: #555;
 }

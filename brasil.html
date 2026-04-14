@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brasil</title>
+  <link rel="icon" type="image/x-icon" href="Logo.png">
+  <link rel="stylesheet" href="css/brasil.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <a href="index.html" class="voltar">
+    <img src="img/logow.png" alt="logo">
+  </a>
+  <div class="button">
+    <a href="spfc.html">Clubes</a>
+    <a href="trofeus.html">Troféus</a>
+  </div>
+</header>
+
+  <div class="linha-header"></div>
+
+  <div class="antf">
+    <img src="img/antony-gold.jpg" alt="Antony">
+  </div>
+    <p class="ant">Antony na</p>
+    <p class="slc">Seleção Brasileira</p>
+    <p class="txt">Antony desde criança sonhava em jogar futebol profissionalmente e representar a seleção dentro de campo</p>
+    <p class="htr">História</p>
+
+    <div class="hst">
+
+      <div class="hst-button">
+        <button onclick="mover(-1)">←</button>
+        <button onclick="mover(1)">→</button>
+      </div>
+    
+      <div class="window">
+        <div class="cards" id="cards">
+    
+          <div class="card">
+            <span class="nmr">01</span>
+            <span class="data">Maio 2019</span>
+            <h3>Primeira Convocação sub-23</h3>
+            <p>Convocado para a seleção pela primeira para disputar o Torneio de Toulon, torneio de seleções sub-23. </p>
+          </div>
+    
+          <div class="card">
+            <span class="nmr">02</span>
+            <span class="data">Maio 2019</span>
+            <h3>Primeiro Golo sub-23</h3>
+            <p>Fez o seu primeiro golo pela seleção sub-23 frente a França.</p>
+          </div>
+    
+          <div class="card">
+            <span class="nmr">03</span>
+            <span class="data">Maio 2019</span>
+            <h3>Primeiro Título sub-23</h3>
+            <p>Marcou na final frente ao Japão nos minutos 19' para conquistar a liderança que foi retomada aos 39' com um golo do Japão, o jogo foi levado as penalidades aonde o Brasil ganhou 5-4.</p>
+          </div>
+    
+          <div class="card">
+            <span class="nmr">04</span>
+            <span class="data">Setembro 2021</span>
+            <h3>Primeira Convocação</h3>
+            <p>Primeira vez convocado a seleção principal, para disputar as partidas de outubro das Eliminatórias da Copa do Mundo de 2022.</p>
+          </div>
+
+          <div class="card">
+            <span class="nmr">05</span>
+            <span class="data">Outubro 2021</span>
+            <h3>Primeiro Golo</h3>
+            <p>Fez o seu primeiro golo na seleção principal frente a Venezuela com apenas 15 minutos dentro do campo </p>
+          </div>
+
+          <div class="card">
+            <span class="nmr">06</span>
+            <span class="data">Novembro 2022</span>
+            <h3>Estreia na Copa do Mundo</h3>
+            <p>Antony começou no banco frente a Sérvia, mas entrou aos 79' com o resultado de 2-0 para o Brasil. </p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <script>
+      var position = 0;
+    
+      function mover(direction) {
+        position += direction;
+    
+        if (position < 0) position = 0;
+        if (position > 0) position = 1;
+    
+        var cards = document.getElementById('cards');
+        cards.style.transform = 'translateX(-' + (position * 65) + 'rem)';
+      }
+    </script>
+
+  <p class="p-est">Estatísticas</p>
+
+  <div class="est">
+
+    <div class="est-box">
+      <span class="est-nmr">16</span>
+      <span class="legenda">JOGOS</span>
+    </div>
+  
+    <div class="est-box">
+      <span class="est-nmr">02</span>
+      <span class="legenda">GOLOS</span>
+    </div>
+  
+    <div class="est-box">
+      <span class="est-nmr">02</span>
+      <span class="legenda">ASSISTÊNCIAS</span>
+    </div>
+  
+    <div class="est-box">
+      <span class="est-nmr" style="color: #2e8b3a;">842</span>
+      <span class="legenda">MINUTOS</span>
+    </div>
+  
+  </div>
+  <footer>
+
+  </footer>
+</body>
+</html>

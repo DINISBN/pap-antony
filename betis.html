@@ -8,20 +8,38 @@
 </head>
 <body>
   <header>
-    <a href="index.html">Voltar</a>
-    <a href="spfc.html" class="qescudo">
-      <img src="img/spfc.png" alt="escudo">
-    </a>
-    <a href="ajax.html" class="tescudo">
-      <img src="img/ajax.png" alt="escudo"> 
-    </a>
-    <a href="united.html" class="sescudo">
-      <img src="img/manut.webp" alt="escudo">
-    </a>
-    <a href="https://www.realbetisbalompie.es" target="_blank" class="escudo">
-      <img src="img/betis.png" alt="escudo">
-    </a>
+    <div class="voltar">
+      <a href="index.html">
+        <img src="img/logow.png" alt="voltar">
+      </a>
+    </div>
+    <div class="button">
+      <a href="brasil.html">Brasil</a>
+      <a href="trofeus.html">Troféus</a>
+    </div>
   </header>
+
+  <div class="linha-header1"></div>
+
+  <div class="sub-header">
+
+  <a href="spfc.html" class="qescudo">
+    <img src="img/spfcb.png" alt="escudo">
+  </a>
+  <a href="ajax.html" class="tescudo">
+    <img src="img/ajaxb.png" alt="escudo"> 
+  </a>
+  <a href="united.html" class="sescudo">
+    <img src="img/manutb.webp" alt="escudo">
+  </a>
+  <a href="https://www.realbetisbalompie.es" target="_blank" class="escudo">
+    <img src="img/betis.png" alt="escudo">
+  </a>
+
+</div>
+
+  <div class="linha-header2"></div>
+  
   <section>
     <input type="radio" name="tabs" id="tab1" checked>
     <input type="radio" name="tabs" id="tab2">
@@ -55,6 +73,14 @@
             <td>17</td><td>5</td><td>2</td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tfoot>
       </table>
       </div>
       <div class="tab-content" id="content2">
@@ -74,7 +100,7 @@
         <tbody>
           <tr>
             <td><div class="competicao"><img src="img/laliga.png">La Liga</div></td>
-            <td>24</td><td>7</td><td>5</td>
+            <td>25</td><td>7</td><td>5</td>
           </tr>
           <tr>
             <td><div class="competicao"><img src="img/coparey.png">Copa Del Rey</div></td>
@@ -82,12 +108,47 @@
           </tr>
           <tr>
             <td><div class="competicao"><img src="img/europal.png">Europa League</div></td>
-            <td>8</td><td>5</td><td>3</td>
+            <td>9</td><td>5</td><td>3</td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+        </tfoot>
       </table>
       </div>     
     </section>
+    <script>
+
+      document.querySelectorAll('table').forEach(function(tabela) {
+    
+        var totalJogos = 0;
+        var totalGolos = 0;
+        var totalAssistencias = 0;
+    
+        tabela.querySelectorAll('tbody tr').forEach(function(linha) {
+    
+          var jogos         = linha.querySelectorAll('td')[1].textContent;
+          var golos         = linha.querySelectorAll('td')[2].textContent;
+          var assistencias  = linha.querySelectorAll('td')[3].textContent;
+    
+          if (jogos !== '-')        totalJogos        += parseInt(jogos);
+          if (golos !== '-')        totalGolos        += parseInt(golos);
+          if (assistencias !== '-') totalAssistencias += parseInt(assistencias);
+        });
+    
+        var colunasTfoot = tabela.querySelector('tfoot').querySelectorAll('td');
+        colunasTfoot[1].textContent = totalJogos;
+        colunasTfoot[2].textContent = totalGolos        === 0 ? '-' : totalGolos;
+        colunasTfoot[3].textContent = totalAssistencias === 0 ? '-' : totalAssistencias;
+    
+      });
+    
+    </script>
   <footer>
 
   </footer>

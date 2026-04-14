@@ -1,4 +1,7 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -6,13 +9,46 @@ header {
   align-items: center;
   justify-content: center;
   display: flex;
+  height: 60px;
+  position: relative;
+  background-color: #2e8b3a;
+}
+
+.voltar {
+  position: absolute;
+  left: 20px; 
+}
+
+.voltar img {
+  width: 170px;
+  height: 50px;
+}
+
+.button a{
+  color: white;
+  text-decoration: none;
+  font-size: 25PX;
+  padding-left: 30px;
+}
+
+.linha-header1 {
+  height: 5px;
+  background: linear-gradient(to right, #1A6626);
+
+}
+
+.sub-header {
+  align-items: center;
+  justify-content: center;
+  display: flex;
   height: 100px;
   gap: 30px;
+  position: relative;
 }
 
 .escudo img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 }
 
 .sescudo img {
@@ -30,9 +66,15 @@ header {
   height: 20px;
 }
 
+.linha-header2 {
+  height: 4px;
+  background: linear-gradient(to right, #2e8b3a 50%, #F0F0F0 50%);
+  margin-bottom: 20px; 
+}
+
 body {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 20PX;
   font-family: 'Bebas Neue', sans-serif;
 }
@@ -56,7 +98,7 @@ input[type="radio"] {
 
 label {
   padding: 10px 45px;
-  background-color: #d5d5d5;
+  background-color: #ece9e2;
   border-radius: 5px;
   color: black;
   cursor: pointer;
@@ -69,13 +111,15 @@ label {
 }
 
 #tab1:checked ~ .tabs label[for="tab1"],
-#tab2:checked ~ .tabs label[for="tab2"] {
-  background-color: #4d63dd;
+#tab2:checked ~ .tabs label[for="tab2"],
+#tab3:checked ~ .tabs label[for="tab3"] {
+  background-color: #7A7A7A;
   color: white;
 }
 
 #tab1:checked~#content1,
-#tab2:checked~#content2{
+#tab2:checked~#content2,
+#tab3:checked~#content3{
   display: block;
 }
 
@@ -94,16 +138,16 @@ th, td {
 td:first-child, th:first-child { text-align: left; }
 
 th {
-  color: #fff;
+  color: #7A7A7A;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #7A7A7A;
   padding-bottom: 10px;
 }
 
 td {
-  color: #fff;
+  color: black;
 }
 
 .competicao {
@@ -118,13 +162,25 @@ td {
   object-fit: contain;
 }
 
+tfoot tr {
+  border-top: 2px solid #7A7A7A; 
+}
+
+tfoot td {
+  color: black;
+  font-size: 20px;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .antony {
   text-align: right;
 }
 
 .antony img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 360px;
   display: block;
   margin-left: auto;
   margin-top: 40px;
