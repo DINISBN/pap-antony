@@ -189,3 +189,39 @@ tfoot td {
 .antony p {
   font-size: 14px;
 }
+
+.video {
+  text-align: center;
+}
+
+.video video {
+  width: 40rem;
+  height: 20rem;
+  margin-top: 26rem;
+}
+
+footer {
+  background-color: #1A6626;
+  padding: 150px 50px 20px 50px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.icon img {
+  width: 25px;
+  height: 25px;
+}
+
+footer p {
+  color: white;
+  font-size: 16PX;
+  font-family: 'Bebas Neue', sans-serif;
+}

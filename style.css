@@ -13,7 +13,7 @@ header {
   justify-content: left;
 }
 
-img {
+header img {
   width: 250px;
   height: 100px;
 }
@@ -58,4 +58,30 @@ nav a.button {
   transform: translateY(-50%);
   color: whitesmoke;         
   max-width: 400px;
+}
+
+footer {
+  background-color: #1A6626;
+  padding: 150px 50px 20px 50px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.icon img {
+  width: 25px;
+  height: 25px;
+}
+
+footer p {
+  color: white;
+  font-size: 16PX;
+  font-family: 'Bebas Neue', sans-serif;
 }
